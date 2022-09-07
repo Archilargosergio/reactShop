@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../containers/layout";
-import Login from "../containers/login";
+import Layout from "../containers/Layout";
+import Login from "../containers/Login";
 import "../styles/global.scss";
 
 const App = () => {
