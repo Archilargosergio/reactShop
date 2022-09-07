@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styles/Login.scss'
 
 const Login = () => {
     return (
- <div className="login">
+ <div className="login-container">
    <div className="form-container">
     <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
 
@@ -12,10 +13,10 @@ const Login = () => {
 
     <form action="/" className="form">
 
-    <label for="password" className="password">Password</label>
+    <label htmlFor="password" className="password">Password</label>
     <input type="password" id="password" placeholder="********" className="input input-password" />
 
-    <label for="new-password" className="new-password">Password</label>
+    <label htmlFor="new-password" className="new-password">Password</label>
     <input type="password" id="new-password" placeholder="********" className="input input-newpassword" />
 
     <input type="submit" value="Confirm" id="button-confirm" className="primary-button login-button" />

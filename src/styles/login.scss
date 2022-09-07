@@ -1,5 +1,6 @@
-@use 'vars';
-    .login {
+@use "./vars";
+
+    .login-container {
         width: 100%;
         height: 100vh;
         display: grid;
