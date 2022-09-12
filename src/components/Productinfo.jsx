@@ -1,5 +1,7 @@
 import React from 'react';
-import '../styles/Productinfo.scss';
+import '@styles/Productinfo.scss';
+
+import addCart from '@icons/bt_add_to_cart.svg';
 
 const Productinfo = () => {
   return (
@@ -10,7 +12,7 @@ const Productinfo = () => {
 				<p>Bike</p>
 				<p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
 				<button className="primary-button add-to-cart-button">
-					<img src="./icons/bt_add_to_cart.svg" alt="add to cart" />
+					<img src={addCart} alt="add to cart" />
 					Add to cart
 				</button>
 			</div>
@@ -18,4 +20,4 @@ const Productinfo = () => {
   )
 }
 
-export default Productinfo
+export default Productinfo;

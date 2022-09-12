@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Checkout.scss';
+import '@styles/Checkout.scss';
 
 const Checkout = () => {
   return (
@@ -15,7 +15,7 @@ const Checkout = () => {
 						<p>$560.00</p>
 					</div>
 				</div>
-				<OrderItem />
+				{<OrderItem />}
 			</div>
 		</div>
   )
