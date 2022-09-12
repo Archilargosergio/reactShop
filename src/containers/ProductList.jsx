@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductItem from '@components/ProductItem.jsx';
 import '@styles/ProductList.scss';
 
 const ProductList = () => {
@@ -11,4 +12,4 @@ const ProductList = () => {
   )
 }
 
-export default ProductList
+export default ProductList;
