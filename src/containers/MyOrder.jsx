@@ -7,6 +7,13 @@ import arrow from '@icons/flechita.svg';
 
 const MyOrder = () => {
 	const { state } = useContext(AppContext);
+
+	const sumTotal = () => {
+		const totalPrice = state.cart.reduce((acumulador, currentPrice) => {
+			return acumulador + currentPrice.price;
+		}, 0);
+		return totalPrice;
+	}
   return (
     <aside className="MyOrder">
 			<div className="title-container">
@@ -14,15 +21,14 @@ const MyOrder = () => {
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">
-				{state.cart.map(product => (
+				{state.cart.map( product => (
 				<OrderItem	product = {product} key={`orderItem-${product.id}`} />
 				))}
-				<OrderItem />
 				<div className="order">
 					<p>
 						<span>Total</span>
 					</p>
-					<p>$560.00</p>
+					<p>${sumTotal()}</p>
 				</div>
 				<button className="primary-button">
 					Checkout
