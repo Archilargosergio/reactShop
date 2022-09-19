@@ -4,21 +4,21 @@ import '@styles/OrderItem.scss';
 
 import closeIcon from '@icons/icon_close.png';
 
-const OrderItem = ({ product }) => {
+const OrderItem = ({ item, index }) => {
 	const { removeFromCart } = useContext(AppContext);
 
-	const handleRemove = product => {
-		removeFromCart(product);
+	const handleRemove = (product) => {
+		removeFromCart(product, index);
 	}
 
 	return (
 		<div className="OrderItem">
 			<figure>
-				<img src={product.images[0]} alt={product.title} />
+				<img src={item.images[0]} alt={item.title} />
 			</figure>
-			<p>{product.title}</p>
-			<p>${product.price}</p>
-			<img src={closeIcon} alt="close" onClick={() => handleRemove(product)} />
+			<p>{item.title}</p>
+			<p>${item.price}</p>
+			<img src={closeIcon} alt="close" onClick={() => handleRemove(item)} />
 		</div>
 	);
 }
