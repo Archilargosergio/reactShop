@@ -5,6 +5,11 @@ nav{
     justify-content: space-between;
     padding: 0 24px;
     border-bottom: 1px solid var(--very-light-pink);
+    position: fixed;
+    top: 5px;
+    background-color: var(--white);
+    width: calc(100% - 48px);
+    height: 38px;
  }
  .menu{
      display: none;

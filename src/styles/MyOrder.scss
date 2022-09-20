@@ -7,10 +7,16 @@
 	position: absolute;
 	right: 0;
 	background-color: var(--white);
-	top: 60px;
+	top: 50px;
 	bottom: 0;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
+	position: fixed;
+	transition: 1s ease;
+	animation: swipeLeft 1s ease forwards;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+	max-height: 500px;
 }
 .title-container {
 	display: flex;
@@ -22,6 +28,13 @@
 .title {
 	font-size: var(--lg);
 	font-weight: bold;
+}
+.cart-product-list {
+	max-height: calc(100vh - 400px);
+	overflow-y: auto;
+}
+.cart-product-list::-webkit-scrollbar {
+	display: none;
 }
 .order {
 	display: grid;
@@ -61,4 +74,7 @@
 	.MyOrder {
 		width: 100%;
 	}
+}
+@keyframes swipeLeft {
+	100% {transform: translateX(-360px);}
 }

@@ -18,8 +18,7 @@ const useInitialState = () => {
     setState({
       ...state,
       cart: state.cart.filter(
-        (item, index) => item.id !== payload && index !== indexValue
-      ),
+        (item, index) => item.id !== payload && index !== indexValue),
     });
   }; 
 
