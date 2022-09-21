@@ -24,13 +24,14 @@
 .title-container img {
 	transform: rotate(180deg);
 	margin-right: 14px;
+	cursor: pointer;
 }
 .title {
 	font-size: var(--lg);
 	font-weight: bold;
 }
 .cart-product-list {
-	max-height: calc(100vh - 400px);
+	max-height: calc(100vh - 500px);
 	overflow-y: auto;
 }
 .cart-product-list::-webkit-scrollbar {
